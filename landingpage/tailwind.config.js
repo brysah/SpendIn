@@ -26,7 +26,7 @@ export default {
       'secondary-700': '#0D121F',
       'secondary-800': '#080C19',
       'secondary-900': '#040815', 
-    } 
+    },  
   },
   plugins: [],
 }
