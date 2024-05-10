@@ -4,6 +4,10 @@ import { Benefits } from './components/Benefits'
 import benefit1 from './assets/benefit-1.png'
 import benefit2 from './assets/benefit-2.png'
 import benefit3 from './assets/benefit-3.png'
+import { WorkItem } from './components/WorkItem'
+import workitem1 from './assets/workitem-1.png'
+import workitem2 from './assets/workitem-2.png'
+import workitem3 from './assets/workitem-3.png'
 
 function App() {
   return (
@@ -33,7 +37,7 @@ function App() {
             Manage all your business expenses with our supafast app. </p>
           <div className="flex gap-3 items-center justify-center mb-[94px]">
             <button className='bg-primary-500 px-[31px] py-[14px] rounded-[30px] text-primary font-semibold text-[16px] hover:bg-primary-400' >Get a Free Demo</button>
-            <button className='bg-secondary-500 py-[14px] px-[24px] rounded-[30px] text-secondary-200 font-semibold text-[16px] hover:bg-secondary-400' >See Princing</button>
+            <button className='bg-secondary-500 py-[14px] px-[24px] rounded-[30px] text-secondary-200 font-semibold text-[16px] hover:bg-secondary-400' >See Pricing</button>
           </div>
           <img src={dashboard} alt="dashboard" className='w-full object-cover' />
         </div>
@@ -45,26 +49,59 @@ function App() {
             <h3 className='text-secondary-900 font-bold text-[40px]'>Easy, Simple, Affordable</h3>
           </div>
           <div>
-          <p className='max-w-[496px] text-secondary-400 text-[20px]'>Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.</p>
+            <p className='max-w-[496px] text-secondary-400 text-[20px]'>Our platform helps your business in managing expenses. These are some of the reasons why you should use our platform in managing business finances.</p>
           </div>
         </div>
-        
+
         <div className="grid w-full grid-cols-3 gap-[24px]">
-            <Benefits 
+          <Benefits
             name='Automatic Invoice Payment'
             description="No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!"
             imgSrc={benefit1}
-            />
-            <Benefits 
+          />
+          <Benefits
             name='Clear payment history'
             description="Still writing manual expenses? Our platform breaks down every expense you log down to the millisecond!"
             imgSrc={benefit2}
-            />
-            <Benefits 
+          />
+          <Benefits
             name='Use of multi-card payments'
             description="Have more than 1 bank account or credit/debit card? Our platform is already integrated with many banks around the world, for easier payments!"
             imgSrc={benefit3}
-            />
+          />
+        </div>
+      </section>
+      <section className="bg-secondary-700 py-[120px] max-w-screen-xl w-full mx-auto px-[15px] relative">
+        <div className="absolute top-0 rounded-full left-0 w-[400px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+        <div className="absolute bottom-0 rounded-full right-0 w-[500px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+
+        <div className="mx-auto  max-w-[720px] w-full">
+          <h5 className='text-primary-500 text-[20px] font-semibold mb-2 text-center' >HOW IT WORKS</h5>
+          <h4 className='font-bold text-[40px] text-primary text-center mb-3'>Few Easy Steps and Done</h4>
+          <p className='text-secondary-300 text-[20px] mb-[39px] text-center'>In just few easy step, you are all set to manage your business finances.
+            Manage all expenses with Spend.In all in one place.</p>
+        </div>
+        <div className="grid grid-cols-3 mb-[64px]">
+          <WorkItem 
+          text='Register your Spend.In account.'
+          index='1'
+          imgSrc={workitem1}
+           />
+           <WorkItem 
+          text='Fill in the list of your 
+          business expenses.'
+          index='2'
+          imgSrc={workitem2}
+           />
+           <WorkItem 
+          text='Done, let’s continue the work.'
+          index='3'
+          imgSrc={workitem3}
+           />
+        </div>
+        <div className="flex gap-3 items-center justify-center ">
+            <button className='bg-primary-500 px-[31px] py-[14px] rounded-[30px] text-primary font-semibold text-[16px] hover:bg-primary-400' >Get a Free Demo</button>
+            <button className='bg-secondary-500 py-[14px] px-[24px] rounded-[30px] text-secondary-200 font-semibold text-[16px] hover:bg-secondary-400' >See Pricing</button>
           </div>
       </section>
     </>
