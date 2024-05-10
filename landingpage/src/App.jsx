@@ -8,8 +8,12 @@ import { WorkItem } from './components/WorkItem'
 import workitem1 from './assets/workitem-1.png'
 import workitem2 from './assets/workitem-2.png'
 import workitem3 from './assets/workitem-3.png'
+import { useState } from 'react'
+import { ToggleButton } from './components/ToggleButton'
 
 function App() {
+  const [hasSpend, setHasSpend] = useState(true);
+ 
   return (
     <>
       <header className='bg-transparent fixed top-0 left-0 w-full'>
@@ -82,27 +86,43 @@ function App() {
             Manage all expenses with Spend.In all in one place.</p>
         </div>
         <div className="grid grid-cols-3 mb-[64px]">
-          <WorkItem 
-          text='Register your Spend.In account.'
-          index='1'
-          imgSrc={workitem1}
-           />
-           <WorkItem 
-          text='Fill in the list of your 
+          <WorkItem
+            text='Register your Spend.In account.'
+            index='1'
+            imgSrc={workitem1}
+          />
+          <WorkItem
+            text='Fill in the list of your 
           business expenses.'
-          index='2'
-          imgSrc={workitem2}
-           />
-           <WorkItem 
-          text='Done, let’s continue the work.'
-          index='3'
-          imgSrc={workitem3}
-           />
+            index='2'
+            imgSrc={workitem2}
+          />
+          <WorkItem
+            text='Done, let’s continue the work.'
+            index='3'
+            imgSrc={workitem3}
+          />
         </div>
         <div className="flex gap-3 items-center justify-center ">
-            <button className='bg-primary-500 px-[31px] py-[14px] rounded-[30px] text-primary font-semibold text-[16px] hover:bg-primary-400' >Get a Free Demo</button>
-            <button className='bg-secondary-500 py-[14px] px-[24px] rounded-[30px] text-secondary-200 font-semibold text-[16px] hover:bg-secondary-400' >See Pricing</button>
-          </div>
+          <button className='bg-primary-500 px-[31px] py-[14px] rounded-[30px] text-primary font-semibold text-[16px] hover:bg-primary-400' >Get a Free Demo</button>
+          <button className='bg-secondary-500 py-[14px] px-[24px] rounded-[30px] text-secondary-200 font-semibold text-[16px] hover:bg-secondary-400' >See Pricing</button>
+        </div>
+      </section>
+      <section className="bg-primary py-[120px] max-w-screen-xl w-full mx-auto px-[15px]">
+        <div className="max-w-[700px] w-full">
+          <h4 className='text-primary-500 text-[20px] font-semibold mb-2'>INCREASE PRODUCTIVITY</h4>
+          <h3 className='text-secondary-500 font-bold text-[40px] mb-5'>Reduce Time in Doing Manual Work Managing Expenses</h3>
+        </div>
+        <div className="flex rounded-[30px] bg-secondary-100 max-w-[368px] w-full">
+          <ToggleButton
+            hasSpend={hasSpend}
+            text='With Spend.In'
+            onClick={() => setHasSpend(!hasSpend)} />
+          <ToggleButton
+            hasSpend={!hasSpend}
+            text='Without Spend.In'
+            onClick={() => setHasSpend(!hasSpend)} />
+        </div>
       </section>
     </>
   )
