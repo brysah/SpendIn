@@ -145,7 +145,6 @@ function App() {
           <p className='text-secondary-300 text-[20px] mb-[39px] text-center'>
             Here are some testimonials from our user after using Spend.In to manage their business  expenses.</p>
         </div>
-        <div className="">
           <Swiper
             modules={[Navigation]}
             spaceBetween={24}
@@ -171,9 +170,6 @@ function App() {
             </div>
 
           </Swiper>
-
-
-        </div>
       </section>
     </>
   )
