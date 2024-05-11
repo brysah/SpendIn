@@ -8,9 +8,17 @@ import { WorkItem } from './components/WorkItem'
 import workitem1 from './assets/workitem-1.png'
 import workitem2 from './assets/workitem-2.png'
 import workitem3 from './assets/workitem-3.png'
+import arrowR from './assets/arrow-right.png'
+import arrowL from './assets/arrow-left.png'
 import { useState } from 'react'
 import { ToggleButton } from './components/ToggleButton'
 import { Stories } from './components/Stories'
+import { testimonials } from './utils/testimonials'
+import { TestimonialCard } from './components/TestmonialCard'
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 function App() {
   const [hasSpend, setHasSpend] = useState(true);
@@ -126,6 +134,45 @@ function App() {
               onClick={() => setHasSpend(hasSpend ? !hasSpend : hasSpend)} />
           </div>
           <Stories hasSpend={hasSpend} />
+        </div>
+      </section>
+      <section className="bg-secondary-700 py-[120px] max-w-screen-xl w-full mx-auto px-[15px] relative">
+        <div className="absolute top-0 rounded-full left-0 w-[400px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+        <div className="absolute bottom-0 rounded-full right-0 w-[500px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+        <div className="mx-auto  max-w-[720px] w-full">
+          <h5 className='text-primary-500 text-[20px] font-semibold mb-2 text-center' >WHAT THEY SAY</h5>
+          <h4 className='font-bold text-[40px] text-primary text-center mb-3'>Our User Kind Words</h4>
+          <p className='text-secondary-300 text-[20px] mb-[39px] text-center'>
+            Here are some testimonials from our user after using Spend.In to manage their business  expenses.</p>
+        </div>
+        <div className="">
+          <Swiper
+            modules={[Navigation]}
+            spaceBetween={24}
+            slidesPerView={3}
+            navigation={{
+              prevEl: '.swiper-button-prev',
+              nextEl: '.swiper-button-next'
+            }}
+          >
+
+            {
+              testimonials?.map((testimonial, index) => (
+                <SwiperSlide key={index}><TestimonialCard user={testimonial} /></SwiperSlide>
+              ))
+            }
+            <div className="flex gap-[20px] max-w-[122px] w-full mx-auto h-[50px] items-center justify-between mt-[64px]">
+              <div className="swiper-button-prev static m-0 after:content-[''] rounded-full bg-primary-500 w-[50px] h-[50px]">
+                <img src={arrowL} alt="left arrow" />
+              </div>
+              <div className="swiper-button-next static m-0 after:content-[''] rounded-full bg-primary-500 w-[50px] h-[50px]">
+                <img src={arrowR} alt="right arrow" /> 
+              </div>
+            </div>
+
+          </Swiper>
+
+
         </div>
       </section>
     </>
