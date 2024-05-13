@@ -10,7 +10,7 @@ import workitem2 from "./assets/workitem-2.png";
 import workitem3 from "./assets/workitem-3.png";
 import arrowR from "./assets/arrow-right.png";
 import arrowL from "./assets/arrow-left.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ToggleButton } from "./components/ToggleButton";
 import { Stories } from "./components/Stories";
 import { testimonials } from "./utils/testimonials";
@@ -29,12 +29,29 @@ import "swiper/css/navigation";
 
 function App() {
   const [hasSpend, setHasSpend] = useState(true);
+  const [isScroll,setIsScroll] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY >= 90) {
+          setIsScroll(true);
+        } else {
+          setIsScroll(false);
+        }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
 
   return (
     <>
-      <header className="bg-transparent fixed top-0 left-0 w-full">
+      <header className="data-[isscrolled=true]:bg-secondary-700 bg-transparent fixed top-0 left-0 w-full z-10 transition-all" data-isscrolled={isScroll}>
         <div className="flex py-[24px] max-w-screen-xl w-full mx-auto items-center justify-between px-[15px] border-solid border-b border-secondary-200">
-          <img src={logo} alt="Company Logo" />
+          <img src={logo} alt="Company Logo"/>
           <nav>
             <ul className="flex gap-[40px] text-[18px] text-primary font-medium">
               <li>
@@ -341,7 +358,7 @@ function App() {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-[64px] bg-primary-200 h-[1px] w-full"></div>
       </footer>
     </>
