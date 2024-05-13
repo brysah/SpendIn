@@ -1,5 +1,4 @@
-import error from '../../assets/error-circle-gray.png'
-import check from '../../assets/check-circle.png'
+import { errorCircleGray, checkCircle } from '../../../utils/exportImages'
 
 export function PlanCard({ type, typeDesc, icon, price, description, pros, contras, btnText }) {
     return (
@@ -13,13 +12,13 @@ export function PlanCard({ type, typeDesc, icon, price, description, pros, contr
             <p className="text-secondary-500 text-[16px] mb-[32px]">{description}</p>
             <ul className='flex gap-[27px] flex-col'>
                 {
-                    pros?.map((pros,index) => (
-                        <li key={index} className='flex items-center gap-1'> <img src={check} alt="check icon" /> {pros}</li>
-                    ))  
+                    pros?.map((pros, index) => (
+                        <li key={index} className='flex items-center gap-1'> <img src={checkCircle} alt="check icon" /> {pros}</li>
+                    ))
                 }
                 {
-                    contras?.map((contra,index) =>(
-                        <li key={index} className='flex items-center gap-1 text-secondary-400'> <img src={error} alt="error icon" /> {contra}</li>
+                    contras?.map((contra, index) => (
+                        <li key={index} className='flex items-center gap-1 text-secondary-400'> <img src={errorCircleGray} alt="error icon" /> {contra}</li>
                     ))
                 }
             </ul>

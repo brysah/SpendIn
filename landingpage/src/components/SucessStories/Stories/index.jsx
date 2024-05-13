@@ -1,4 +1,4 @@
-import { withSpend, withoutSpend } from "../../utils/textSectionStories"
+import { withSpend, withoutSpend } from "../../../utils/textSectionStories"
 
 export function Stories({ hasSpend }) {  
     return (
