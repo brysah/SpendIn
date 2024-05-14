@@ -27,7 +27,7 @@ export function Pricing() {
                 <img src={arrowDraw} alt="arrow" className="absolute top-[25px] right-0" />
             </div>
             <span className="bg-primary-100 px-[12px] py-[4px] rounded-3xl w-[89px] mx-auto text-[14px] text-secondary-700 font-medium text-center block" >Save 65%</span>
-            <div className="grid grid-cols-3 gap-[24px] mt-[20px]">
+            <div className="grid grid-cols-3 gap-[24px] mt-[20px] lg:flex lg:flex-wrap lg:items-center lg:justify-center">
                 <PlanCard
                     type='Free'
                     typeDesc='Perfect plan to get started'
