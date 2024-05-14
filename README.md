@@ -1,7 +1,7 @@
 
 # SpendIn Website Conversion
 
-This project is a website conversion from a Figma design to a React application. The main purpose of this project was to exercise my knowledge in tailwindss, a popular css pre-processor.
+This project is a website conversion from a Figma design to a React application. The main purpose of this project was to exercise my knowledge in tailwindcss, a popular css pre-processor.
 
 ![SpendIn](https://github.com/brysah/SpendIn/blob/main/share-img.png)
 
