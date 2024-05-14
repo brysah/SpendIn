@@ -20,7 +20,7 @@ export function HowItWorks() {
                     finances. Manage all expenses with Spend.In all in one place.
                 </p>
             </div>
-            <div className="grid grid-cols-3 mb-[64px]">
+            <div className="grid grid-cols-3 gap-[20px] mb-[64px] lg:flex lg:flex-wrap lg:items-center lg:justify-center">
                 <WorkItem
                     text="Register your Spend.In account."
                     index="1"
@@ -38,7 +38,7 @@ export function HowItWorks() {
                     imgSrc={workitem3}
                 />
             </div>
-            <div className="flex gap-3 items-center justify-center ">
+            <div className="flex gap-3 items-center justify-center  lg:flex-wrap ">
                 <button className="bg-primary-500 px-[31px] py-[14px] rounded-[30px] text-primary font-semibold text-[16px] hover:bg-primary-400">
                     Get a Free Demo
                 </button>
