@@ -9,8 +9,8 @@ import { TestimonialCard } from "./TestmonialCard";
 export function Testimonials() {
     return (
         <section className="bg-secondary-700 py-[120px] max-w-screen-xl w-full mx-auto px-[15px] relative">
-            <div className="absolute top-0 rounded-full left-0 w-[400px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
-            <div className="absolute bottom-0 rounded-full right-0 w-[500px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+            <div className="absolute top-0 rounded-full left-0 w-[400px] h-[400px] bg-primary opacity-5 blur-[100px] lg:hidden"></div>
+            <div className="absolute bottom-0 rounded-full right-0 w-[500px] h-[400px] bg-primary opacity-5 blur-[100px] lg:hidden"></div>
             <div className="mx-auto  max-w-[720px] w-full">
                 <h5 className="text-primary-500 text-[20px] font-semibold mb-2 text-center">
                     WHAT THEY SAY
