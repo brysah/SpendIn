@@ -25,6 +25,13 @@ export default withMT({
       "secondary-800": "#080C19",
       "secondary-900": "#040815",
     },
+    screens: { 
+      'lg': {'max': '1024px'}, 
+
+      'md': {'max': '768px'}, 
+
+      'sm': {'max': '480px'}, 
+    }
   },
   plugins: [],
 });
