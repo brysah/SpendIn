@@ -13,8 +13,9 @@ export { arrowDraw, arrowLeft, arrowRight };
 import checkCircle from "../assets/images/icons/check-circle.png";
 import errorCircleGray from "../assets/images/icons/error-circle-gray.png";
 import errorCircle from "../assets/images/icons/error-circle.png";
+import menuHamburguer from "../assets/images/icons/menu-hamburguer.png";
 
-export { checkCircle, errorCircleGray, errorCircle };
+export { checkCircle, errorCircleGray, errorCircle, menuHamburguer };
 
 import crown from "../assets/images/icons/icon-crown.png";
 import flash from "../assets/images/icons/icon-flash.png";
