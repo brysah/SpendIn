@@ -31,6 +31,23 @@ export function Testimonials() {
                     prevEl: ".swiper-button-prev",
                     nextEl: ".swiper-button-next",
                 }}
+                 breakpoints={{
+                    320: {
+                        slidesPerView: 1, 
+                    },
+                    475: {
+                        slidesPerView: 1, 
+                    },
+                    768:{
+                        slidesPerView: 2, 
+                    },
+                    991: {
+                        slidesPerView: 2.2, 
+                    },
+                    1024: {
+                        slidesPerView: 3, 
+                    }, 
+                }}
             >
                 {testimonials?.map((testimonial, index) => (
                     <SwiperSlide key={index}>
