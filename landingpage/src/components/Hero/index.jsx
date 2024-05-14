@@ -3,7 +3,12 @@ import dashboard from "../../assets/dashboard.png";
 
 export function Hero() {
     return (
-        <main className="bg-secondary-700 pt-[220px] ">
+        <main className="bg-secondary-700 pt-[220px] relative overflow-hidden">
+
+            <div className="absolute top-0 rounded-full left-0 w-[400px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+            <div className="absolute bottom-0 rounded-full right-0 w-[500px] h-[400px] bg-primary opacity-5 blur-[100px]"></div>
+            <div className="absolute bottom-[-464px] rounded-full left-[-450px] w-[900px] h-[900px] opacity-5 border-primary border-[100px]"></div>
+            <div className="absolute top-[-471px] rounded-full right-[-450px] w-[900px] h-[900px] opacity-5 border-primary border-[100px]"></div>
             <div className="max-w-screen-xl w-full mx-auto">
                 <h1 className="font-bold text-[72px] text-center text-primary max-w-[800px] mx-auto leading-[150%] mb-[24px]">
                     All your business expenses in one place.
@@ -28,4 +33,4 @@ export function Hero() {
             </div>
         </main>
     )
-}
+} 
