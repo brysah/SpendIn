@@ -2,13 +2,13 @@ import { logoDark } from '../../utils/exportImages'
 
 export function Footer() {
     return (
-        <footer className="py-[120px] bg-primary max-w-screen-xl w-full mx-auto px-[15px]">
-            <div className="flex justify-between">
+        <footer className="py-[120px] bg-primary max-w-screen-xl w-full mx-auto px-[15px] lg:py-[60px]">
+            <div className="flex justify-between lg:flex-wrap lg:gap-[36px] lg:items-center lg:justify-center">
                 <div className="w-[190px]">
                     <img src={logoDark} alt="logo spendIn" />
                     <p className="text-secondary-400 text-[18px] mt-[32px]">Data visualization, and expense management for your business.</p>
                 </div>
-                <div className="flex justify-between gap-[72px]">
+                <div className="flex justify-between gap-[72px] lg:flex-wrap lg:gap-[36px] lg:items-center lg:justify-center">
                     <div className="">
                         <strong className="text-secondary-500 text-[20px] font-semibold ">Product</strong>
                         <ul className="flex flex-col mt-[32px] gap-[32px]">
