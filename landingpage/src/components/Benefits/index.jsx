@@ -4,7 +4,7 @@ import { benefit1, benefit2, benefit3 } from '../../utils/exportImages'
 export function Benefits() {
     return (
         <section className="bg-primary pt-[120px] max-w-screen-xl w-full mx-auto px-[15px] mb-[120px]">
-            <div className="flex max-w-[904px] items-center justify-between mb-[79px]">
+            <div className="flex max-w-[904px] items-center justify-between mb-[79px] lg:flex-wrap">
                 <div>
                     <h4 className="text-primary-500 font-semibold text-[20px] mb-2">
                         WHY USE SPEND.IN
@@ -22,7 +22,7 @@ export function Benefits() {
                 </div>
             </div>
 
-            <div className="grid w-full grid-cols-3 gap-[24px]">
+            <div className="grid w-full grid-cols-3 gap-[24px] lg:flex lg:flex-wrap lg:items-center lg:justify-center">
                 <BenefitsCard
                     name="Automatic Invoice Payment"
                     description="No need to pay manually, we provide automatic invoice payment service! Set a payment schedule and you're done, it's that easy!"
