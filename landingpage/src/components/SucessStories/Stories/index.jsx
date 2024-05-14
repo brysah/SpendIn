@@ -5,7 +5,7 @@ export function Stories({ hasSpend }) {
         <>
             {
                 hasSpend ? (
-                    <div className="flex justify-between">
+                    <div className="flex justify-between lg:flex-col lg:items-center lg:gap-6 ">
                         <div className="max-w-[564px] w-full">
                             <div className="text-secondary-700 text-[24px] font-bold mb-[32px]">{withSpend.title}</div>
                             <ul className="flex flex-col gap-[32px]">
@@ -19,10 +19,10 @@ export function Stories({ hasSpend }) {
                                 }
                             </ul>
                         </div>
-                        <img className="absolute top-0 right-0" src={withSpend.imageStatistics} alt="Statistics" />
+                        <img className="absolute top-0 right-0 lg:static" src={withSpend.imageStatistics} alt="Statistics" />
                     </div>
                 ) : (
-                    <div className="flex justify-between">
+                    <div className="flex justify-between lg:flex-col lg:items-center lg:gap-6">
                         <div className="max-w-[564px] w-full">
                             <div className="text-secondary-700 text-[24px] font-bold mb-[32px]">{withoutSpend.title}</div>
                             <ul className="flex flex-col gap-[32px]">
@@ -36,7 +36,7 @@ export function Stories({ hasSpend }) {
                                 }
                             </ul>
                         </div>
-                        <img className="absolute top-0 right-0" src={withoutSpend.imageStatistics} alt="Statistics" />
+                        <img className="absolute top-0 right-0 lg:static" src={withoutSpend.imageStatistics} alt="Statistics" />
                     </div>
                 )
             }
